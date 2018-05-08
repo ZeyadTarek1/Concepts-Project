@@ -202,10 +202,10 @@ prereq(cs283,cs102x).
 
 /* Semester 4 */
 prereq(cs217,cs102x).
-prereq(cs232.cs213).
+prereq(cs232,cs213).
 prereq(cs215,cs205).
 prereq(cs216,cs100x).
-prereq(cs214.cs205).
+prereq(cs214,cs205).
 prereq(mgt200,eng101x).
 
 /* Year 3: Path 1: Computer Science */
@@ -224,7 +224,7 @@ prereq(cs381,cs232).
 prereq(cs352,cs351).
 prereq(cs364,cs351).
 prereq(fele2,fele2).
-prereq(csele1,SelectedTopics).
+prereq(csele1,selectedTopics).
 
 
 /* Year 4: Path 1: Computer Science */
@@ -233,9 +233,9 @@ prereq(csele1,SelectedTopics).
 prereq(cs403,cs213).
 prereq(cs486,mth106).
 prereq(cs427,cs381).
-prereq(csele2,SelectedTopics).
+prereq(csele2,selectedTopics).
 prereq(fele3,fele3).
-prereq(cs405x,SeniorStanding).
+prereq(cs405x,seniorStanding).
 
 /* Semester 8 */
 prereq(cs301,cs102).
@@ -265,7 +265,7 @@ prereq(cs385,cs334).
 prereq(cs384,cs283).
 prereq(cs364,cs351).
 prereq(fele2,fele2).
-prereq(csele1,SelectedTopics).
+prereq(csele1,selectedTopics).
 
 
 /* Year 4: Path 2: Internet Computing */
@@ -274,9 +274,9 @@ prereq(csele1,SelectedTopics).
 prereq(cs425,cs384).
 prereq(cs476,cs385).
 prereq(cs465,cs314).
-prereq(csele2,SelectedTopics).
+prereq(csele2,selectedTopics).
 prereq(fele3,fele3).
-prereq(cs405x,SeniorStanding).
+prereq(cs405x,seniorStanding).
 
 /* Semester 8 */
 prereq(cs301,cs102).
@@ -306,18 +306,18 @@ prereq(cs344,cs314).
 prereq(cs384,cs283).
 prereq(cs364,cs351).
 prereq(fele2,fele2).
-prereq(csele1,SelectedTopics).
+prereq(csele1,selectedTopics).
 
 
 /* Year 4: Path 3: Software Engineering */
 
 /* Semester 7 */
-prereq(cs425.cs384).
+prereq(cs425,cs384).
 prereq(cs442,cs347).
 prereq(cs465,cs314).
-prereq(csele2,SelectedTopics).
+prereq(csele2,selectedTopics).
 prereq(fele3,fele3).
-prereq(cs405x,SeniorStanding).
+prereq(cs405x,seniorStanding).
 
 /* Semester 8 */
 prereq(cs301,cs102).
@@ -355,7 +355,7 @@ prereq(mkt201,eng101).
 
 /* IS Electives */
 prereq(cs372,cs215).
-prereq(cs373.cs215).
+prereq(cs373,cs215).
 prereq(cs466,cs372).
 
 /* Pure CS Electives */
