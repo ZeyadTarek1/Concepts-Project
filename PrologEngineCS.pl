@@ -168,19 +168,18 @@ course(cs406).
 /* Defining Pre-requisites */
 
 /* Syntax: prereq(x,y) -> y is the prereq of x, ie you need y to open x. */
-/* if prereq(x,y) returns the same value, then x has no prereq */
 
 
 /* Year 1: General Year */
 
 
 /* Semester 1 */
-prereq(mth100,mth100).
-prereq(eng101x,eng101x).
-prereq(cs100x,cs100x).
-prereq(cs101x,cs101x).
-prereq(mth103,mth103).
-prereq(hele1,hele1).
+prereq(mth100,none).
+prereq(eng101x,none).
+prereq(cs100x,none).
+prereq(cs101x,none).
+prereq(mth103,none).
+prereq(hele1,none).
 
 /* Semester 2 */
 prereq(cs102x,cs101x).
