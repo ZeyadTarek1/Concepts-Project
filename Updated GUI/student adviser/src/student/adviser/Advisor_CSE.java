@@ -23,12 +23,12 @@ import jpl.Query;
  *
  * @author spide
  */
-public class Advisor_CS extends javax.swing.JFrame {
+public class Advisor_CSE extends javax.swing.JFrame {
 
     /**
      * Creates new form advisor
      */
-    public Advisor_CS() {
+    public Advisor_CSE() {
         initComponents();
     }
 
@@ -104,7 +104,7 @@ public class Advisor_CS extends javax.swing.JFrame {
         });
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel1.setText("Faculty of Computer Science");
+        jLabel1.setText("Faculty of Computer Engineering");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -150,11 +150,11 @@ public class Advisor_CS extends javax.swing.JFrame {
                         .addGap(0, 24, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(32, 32, 32)
+                        .addGap(20, 20, 20)
                         .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGap(18, 18, 18)
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -173,12 +173,12 @@ public class Advisor_CS extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         jTextArea1.setText("");
-        File file = new File("F:\\GitHub\\Concepts-Project\\Courses_Available_CS.txt");
+        File file = new File("F:\\GitHub\\Concepts-Project\\Courses_Available_CSE.txt");
         BufferedReader br = null;
         try {
             br = new BufferedReader(new FileReader(file));
         } catch (FileNotFoundException ex) {
-            Logger.getLogger(Advisor_CS.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Advisor_CSE.class.getName()).log(Level.SEVERE, null, ex);
         }
         
         String st;
@@ -191,7 +191,7 @@ public class Advisor_CS extends javax.swing.JFrame {
                 
             }   
         } catch (IOException ex) {
-            Logger.getLogger(Advisor_CS.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Advisor_CSE.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -206,12 +206,12 @@ public class Advisor_CS extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         jTextArea1.setText("");
-        File file = new File("F:\\GitHub\\Concepts-Project\\CS_Student_Courses_Taken.txt");
+        File file = new File("F:\\GitHub\\Concepts-Project\\CSE_Student_Courses_Taken.txt");
         BufferedReader br = null;
         try {
             br = new BufferedReader(new FileReader(file));
         } catch (FileNotFoundException ex) {
-            Logger.getLogger(Advisor_CS.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Advisor_CSE.class.getName()).log(Level.SEVERE, null, ex);
         }
         
         String st;
@@ -224,7 +224,7 @@ public class Advisor_CS extends javax.swing.JFrame {
                 
             }   
         } catch (IOException ex) {
-            Logger.getLogger(Advisor_CS.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Advisor_CSE.class.getName()).log(Level.SEVERE, null, ex);
         }
     
     }//GEN-LAST:event_jButton2ActionPerformed
@@ -234,12 +234,12 @@ public class Advisor_CS extends javax.swing.JFrame {
         
         ArrayList<String> Offered = new ArrayList<String>();
         
-        File file = new File("F:\\GitHub\\Concepts-Project\\Courses_Available_CS.txt");
+        File file = new File("F:\\GitHub\\Concepts-Project\\Courses_Available_CSE.txt");
         BufferedReader br = null;
         try {
             br = new BufferedReader(new FileReader(file));
         } catch (FileNotFoundException ex) {
-            Logger.getLogger(Advisor_CS.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Advisor_CSE.class.getName()).log(Level.SEVERE, null, ex);
         }
         
         String st;
@@ -248,7 +248,7 @@ public class Advisor_CS extends javax.swing.JFrame {
             while ((st = br.readLine()) != null)
              Offered.add(st);            
         } catch (IOException ex) {
-            Logger.getLogger(Advisor_CS.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Advisor_CSE.class.getName()).log(Level.SEVERE, null, ex);
         }
         
 
@@ -256,7 +256,7 @@ public class Advisor_CS extends javax.swing.JFrame {
         String usercourse = "";
         String t1,t2;
         
-        t1 = "consult('F:/GitHub/Concepts-Project/PrologEngineCS.pl')"; //initialize database
+        t1 = "consult('F:/GitHub/Concepts-Project/PrologEngineCSE.pl')"; //initialize database
         Query q1 = new Query(t1);
         System.out.println(t1 + " " + (q1.hasSolution() ? "success" : "failed") );
         
@@ -289,7 +289,7 @@ public class Advisor_CS extends javax.swing.JFrame {
         Variable Course = new Variable();
         String usercourse = "";
         
-        String t1 = "consult('F:/GitHub/Concepts-Project/PrologEngineCS.pl')"; //initialize database
+        String t1 = "consult('F:/GitHub/Concepts-Project/PrologEngineCSE.pl')"; //initialize database
         Query q1 = new Query(t1);
         System.out.println(t1 + " " + (q1.hasSolution() ? "success" : "failed") );
         
@@ -323,7 +323,7 @@ public class Advisor_CS extends javax.swing.JFrame {
         Variable Course = new Variable();
         String usercourse = "";
         
-        String t1 = "consult('F:/GitHub/Concepts-Project/PrologEngineCS.pl')"; //initialize database
+        String t1 = "consult('F:/GitHub/Concepts-Project/PrologEngineCSE.pl')"; //initialize database
         Query q1 = new Query(t1);
         System.out.println(t1 + " " + (q1.hasSolution() ? "success" : "failed") );
         
@@ -365,21 +365,23 @@ public class Advisor_CS extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Advisor_CS.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Advisor_CSE.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Advisor_CS.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Advisor_CSE.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Advisor_CS.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Advisor_CSE.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Advisor_CS.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Advisor_CSE.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Advisor_CS().setVisible(true);
+                new Advisor_CSE().setVisible(true);
             }
         });
         

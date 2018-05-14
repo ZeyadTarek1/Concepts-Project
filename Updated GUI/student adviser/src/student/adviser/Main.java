@@ -67,11 +67,11 @@ public class Main extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setText("id");
+        jLabel1.setText("ID");
 
-        jLabel2.setText("password");
+        jLabel2.setText("Password");
 
-        jLabel3.setText("debartment");
+        jLabel3.setText("Department");
 
         login.setText("login");
         login.addActionListener(new java.awt.event.ActionListener() {
@@ -80,7 +80,7 @@ public class Main extends javax.swing.JFrame {
             }
         });
 
-        adminlogin.setText("admin login");
+        adminlogin.setText("Admin Login");
         adminlogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 adminloginActionPerformed(evt);
@@ -108,7 +108,7 @@ public class Main extends javax.swing.JFrame {
                     .addComponent(IDpassword, javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(ID, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 157, Short.MAX_VALUE)
                     .addComponent(dep, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(200, Short.MAX_VALUE))
+                .addContainerGap(199, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -116,8 +116,8 @@ public class Main extends javax.swing.JFrame {
                         .addComponent(login)
                         .addGap(254, 254, 254))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(adminlogin)
-                        .addGap(240, 240, 240))))
+                        .addComponent(adminlogin, javax.swing.GroupLayout.PREFERRED_SIZE, 359, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(107, 107, 107))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -136,9 +136,9 @@ public class Main extends javax.swing.JFrame {
                     .addComponent(jLabel3))
                 .addGap(18, 18, 18)
                 .addComponent(login)
-                .addGap(18, 18, 18)
-                .addComponent(adminlogin)
-                .addGap(138, 138, 138))
+                .addGap(106, 106, 106)
+                .addComponent(adminlogin, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(34, 34, 34))
         );
 
         pack();
