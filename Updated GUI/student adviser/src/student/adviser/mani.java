@@ -165,7 +165,7 @@ public class mani extends javax.swing.JFrame {
             IDpassword.setText("");
             ID.setText("");
             close();
-            advisor a = new advisor();
+            Advisor_CS a = new Advisor_CS();
             a.setVisible(true);
         }
         else
