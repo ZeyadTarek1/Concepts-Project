@@ -12,6 +12,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 //import org.jpl7.Term;
@@ -95,6 +96,11 @@ public class Advisor_CS extends javax.swing.JFrame {
         jTextField3.setText("Course Code");
 
         ReqBtn.setText("Required for");
+        ReqBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ReqBtnActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -213,17 +219,121 @@ public class Advisor_CS extends javax.swing.JFrame {
     private void DropBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DropBtnActionPerformed
         // TODO add your handling code here:
         
+        ArrayList<String> Offered = new ArrayList<String>();
+        
+        File file = new File("F:\\GitHub\\Concepts-Project\\Courses_Available_CS.txt");
+        BufferedReader br = null;
+        try {
+            br = new BufferedReader(new FileReader(file));
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(Advisor_CS.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        String st;
+        try 
+        {
+            while ((st = br.readLine()) != null)
+             Offered.add(st);            
+        } catch (IOException ex) {
+            Logger.getLogger(Advisor_CS.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+
+        Variable Course = new Variable();
+        String usercourse = "";
+        String t1,t2;
+        
+        t1 = "consult('F:/GitHub/Concepts-Project/PrologEngineCS.pl')"; //initialize database
+        Query q1 = new Query(t1);
+        System.out.println(t1 + " " + (q1.hasSolution() ? "success" : "failed") );
+        
+        usercourse = jTextField3.getText();
+        t2 = "prereq(" + usercourse + ",Course)";
+        System.out.println(t2);
+        Query q2 = new Query(t2);
+        
+        //System.out.println(t2);
+        //temp2 = q2.getSolution().toString();
+        //jTextField3.setText(temp2);
+        //System.out.println(q2.oneSolution().get("Course"));
+        
+        java.util.Hashtable[] answers = q2.allSolutions();
+        for ( int i = 0; i < answers.length; i++)
+        {
+            if(Offered.contains(answers[i]))
+            {
+            jTextArea1.append(answers[i].toString());
+            jTextArea1.append(" \n");
+            }
+        } 
+        
     }//GEN-LAST:event_DropBtnActionPerformed
 
     private void PreBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PreBtnActionPerformed
         // TODO add your handling code here:
         String temp;
         temp = jTextField3.getText();
-    
+        Variable Course = new Variable();
+        String usercourse = "";
+        
         String t1 = "consult('F:/GitHub/Concepts-Project/PrologEngineCS.pl')"; //initialize database
         Query q1 = new Query(t1);
         System.out.println(t1 + " " + (q1.hasSolution() ? "success" : "failed") );
+        
+        //String t2 = "prereq(mth100,Course)";
+        
+        usercourse = jTextField3.getText();
+        String t2 = "prereq(" + usercourse + ",Course)";
+        System.out.println(t2);
+        Query q2 = new Query(t2);
+        
+        //System.out.println(t2);
+        //temp2 = q2.getSolution().toString();
+        //jTextField3.setText(temp2);
+        //System.out.println(q2.oneSolution().get("Course"));
+        
+        java.util.Hashtable[] answers = q2.allSolutions();
+        for ( int i = 0; i < answers.length; i++)
+        {
+            jTextArea1.append(answers[i].toString());
+            jTextArea1.append(" \n");
+        }
+
     }//GEN-LAST:event_PreBtnActionPerformed
+
+    private void ReqBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ReqBtnActionPerformed
+        // TODO add your handling code here:
+        
+        // TODO add your handling code here:
+        String temp;
+        temp = jTextField3.getText();
+        Variable Course = new Variable();
+        String usercourse = "";
+        
+        String t1 = "consult('F:/GitHub/Concepts-Project/PrologEngineCS.pl')"; //initialize database
+        Query q1 = new Query(t1);
+        System.out.println(t1 + " " + (q1.hasSolution() ? "success" : "failed") );
+        
+        //String t2 = "prereq(mth100,Course)";
+        
+        usercourse = jTextField3.getText();
+        String t2 = "prereq(Course," + usercourse +")";
+        System.out.println(t2);
+        Query q2 = new Query(t2);
+        
+        //System.out.println(t2);
+        //temp2 = q2.getSolution().toString();
+        //jTextField3.setText(temp2);
+        //System.out.println(q2.oneSolution().get("Course"));
+        
+        java.util.Hashtable[] answers = q2.allSolutions();
+        for ( int i = 0; i < answers.length; i++)
+        {
+            jTextArea1.append(answers[i].toString());
+            jTextArea1.append(" \n");
+        }
+        
+    }//GEN-LAST:event_ReqBtnActionPerformed
 
     /**
      * @param args the command line arguments
