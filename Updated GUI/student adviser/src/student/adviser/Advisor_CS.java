@@ -158,7 +158,7 @@ public class Advisor_CS extends javax.swing.JFrame {
     private void logoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutActionPerformed
         // TODO add your handling code here:
         close();
-            mani m = new mani();
+            Main m = new Main();
             m.setVisible(true);
 
     }//GEN-LAST:event_logoutActionPerformed
