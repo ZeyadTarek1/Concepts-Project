@@ -145,7 +145,7 @@ public class Admin_Panel extends javax.swing.JFrame {
         try {
             // TODO add your handling code here:
 
-           file = new File("Courses_Available_CS.txt");
+           file = new File("C:\\Users\\Ziad tarek\\Desktop\\Concepts-Project\\Courses_Available_CS.txt");
            out = new FileWriter(file);
            jTextArea1.write(out);
            //out.write(jTextArea1.getText());
@@ -159,7 +159,7 @@ public class Admin_Panel extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         jTextArea1.setText("");
-        File file = new File("F:\\GitHub\\Concepts-Project\\Courses_Available_CS.txt");
+        File file = new File("C:\\Users\\Ziad tarek\\Desktop\\Concepts-Project\\Courses_Available_CS.txt");
         BufferedReader br = null;
         try {
             br = new BufferedReader(new FileReader(file));

@@ -174,7 +174,7 @@ public class Advisor_CSE extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         jTextArea1.setText("");
-        File file = new File("F:\\GitHub\\Concepts-Project\\Courses_Available_CSE.txt");
+        File file = new File("C:\\Users\\Ziad tarek\\Desktop\\Concepts-Project\\Courses_Available_CSE.txt");
         BufferedReader br = null;
         try {
             br = new BufferedReader(new FileReader(file));
@@ -207,7 +207,7 @@ public class Advisor_CSE extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         jTextArea1.setText("");
-        File file = new File("F:\\GitHub\\Concepts-Project\\CSE_Student_Courses_Taken.txt");
+        File file = new File("C:\\Users\\Ziad tarek\\Desktop\\Concepts-Project\\CSE_Student_Courses_Taken.txt");
         BufferedReader br = null;
         try {
             br = new BufferedReader(new FileReader(file));
@@ -235,7 +235,7 @@ public class Advisor_CSE extends javax.swing.JFrame {
         
         ArrayList<String> Offered = new ArrayList<String>();
         
-        File file = new File("F:\\GitHub\\Concepts-Project\\Courses_Available_CSE.txt");
+        File file = new File("C:\\Users\\Ziad tarek\\Desktop\\Concepts-Project\\Courses_Available_CSE.txt");
         BufferedReader br = null;
         try {
             br = new BufferedReader(new FileReader(file));
@@ -257,7 +257,7 @@ public class Advisor_CSE extends javax.swing.JFrame {
         String usercourse = "";
         String t1,t2;
         
-        t1 = "consult('F:/GitHub/Concepts-Project/PrologEngineCSE.pl')"; //initialize database
+        t1 = "consult('C:\\Users\\Ziad tarek\\Desktop\\Concepts-Project\\PrologEngineCSE.pl')"; //initialize database
         Query q1 = new Query(t1);
         System.out.println(t1 + " " + (q1.hasSolution() ? "success" : "failed") );
         
@@ -290,7 +290,7 @@ public class Advisor_CSE extends javax.swing.JFrame {
         Variable Course = new Variable();
         String usercourse = "";
         
-        String t1 = "consult('F:/GitHub/Concepts-Project/PrologEngineCSE.pl')"; //initialize database
+        String t1 = "consult('C:\\Users\\Ziad tarek\\Desktop\\Concepts-Project\\PrologEngineCSE.pl')"; //initialize database
         Query q1 = new Query(t1);
         System.out.println(t1 + " " + (q1.hasSolution() ? "success" : "failed") );
         
@@ -324,7 +324,7 @@ public class Advisor_CSE extends javax.swing.JFrame {
         Variable Course = new Variable();
         String usercourse = "";
         
-        String t1 = "consult('F:/GitHub/Concepts-Project/PrologEngineCSE.pl')"; //initialize database
+        String t1 = "consult('C:\\Users\\Ziad tarek\\Desktop\\Concepts-Project\\PrologEngineCSE.pl')"; //initialize database
         Query q1 = new Query(t1);
         System.out.println(t1 + " " + (q1.hasSolution() ? "success" : "failed") );
         

@@ -177,7 +177,7 @@ public class Advisor_CS extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         jTextArea1.setText("");
-        File file = new File("F:\\GitHub\\Concepts-Project\\Courses_Available_CS.txt");
+        File file = new File("C:\\Users\\Ziad tarek\\Desktop\\Concepts-Project\\Courses_Available_CS.txt");
         BufferedReader br = null;
         try {
             br = new BufferedReader(new FileReader(file));
@@ -210,7 +210,7 @@ public class Advisor_CS extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         jTextArea1.setText("");
-        File file = new File("F:\\GitHub\\Concepts-Project\\CS_Student_Courses_Taken.txt");
+        File file = new File("C:\\Users\\Ziad tarek\\Desktop\\Concepts-Project\\CS_Student_Courses_Taken.txt");
         BufferedReader br = null;
         try {
             br = new BufferedReader(new FileReader(file));
@@ -238,7 +238,7 @@ public class Advisor_CS extends javax.swing.JFrame {
         
         ArrayList<String> Offered = new ArrayList<String>();
         
-        File file = new File("F:\\GitHub\\Concepts-Project\\Courses_Available_CS.txt");
+        File file = new File("C:\\Users\\Ziad tarek\\Desktop\\Concepts-Project\\Courses_Available_CS.txt");
         BufferedReader br = null;
         try {
             br = new BufferedReader(new FileReader(file));
@@ -259,8 +259,8 @@ public class Advisor_CS extends javax.swing.JFrame {
         Variable Course = new Variable();
         String usercourse = "";
         String t1,t2;
-        
-        t1 = "consult('F:/GitHub/Concepts-Project/PrologEngineCS.pl')"; //initialize database
+        jTextArea1.setText("");
+        t1 = "consult('C:\\Users\\Ziad tarek\\Desktop\\Concepts-Project/PrologEngineCS.pl')"; //initialize database
         Query q1 = new Query(t1);
         System.out.println(t1 + " " + (q1.hasSolution() ? "success" : "failed") );
         
@@ -288,17 +288,17 @@ public class Advisor_CS extends javax.swing.JFrame {
 
     private void PreBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PreBtnActionPerformed
         // TODO add your handling code here:
-        String temp;
-        temp = jTextField3.getText();
+       
         Variable Course = new Variable();
         String usercourse = "";
         
-        String t1 = "consult('F:/GitHub/Concepts-Project/PrologEngineCS.pl')"; //initialize database
+        String t1 = "consult('C:\\Users\\Ziad tarek\\Desktop\\Concepts-ProjectPrologEngineCS.pl')"; //initialize database
         Query q1 = new Query(t1);
         System.out.println(t1 + " " + (q1.hasSolution() ? "success" : "failed") );
         
         //String t2 = "prereq(mth100,Course)";
         
+        jTextArea1.setText("");
         usercourse = jTextField3.getText();
         String t2 = "prereq(" + usercourse + ",Course)";
         System.out.println(t2);
@@ -327,12 +327,14 @@ public class Advisor_CS extends javax.swing.JFrame {
         Variable Course = new Variable();
         String usercourse = "";
         
-        String t1 = "consult('F:/GitHub/Concepts-Project/PrologEngineCS.pl')"; //initialize database
+        String t1 = "consult('C:\\Users\\Ziad tarek\\Desktop\\Concepts-Project\\PrologEngineCS.pl')"; //initialize database
         Query q1 = new Query(t1);
         System.out.println(t1 + " " + (q1.hasSolution() ? "success" : "failed") );
         
         //String t2 = "prereq(mth100,Course)";
         
+        
+        jTextArea1.setText("");
         usercourse = jTextField3.getText();
         String t2 = "prereq(Course," + usercourse +")";
         System.out.println(t2);

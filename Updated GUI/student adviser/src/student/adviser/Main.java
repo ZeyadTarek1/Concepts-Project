@@ -134,14 +134,14 @@ public class Main extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(36, 36, 36)
                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
+                .addGap(48, 48, 48)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(ID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel2)
-                    .addComponent(IDpassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(IDpassword))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(dep, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -172,7 +172,7 @@ public class Main extends javax.swing.JFrame {
        
         String pasword =IDpassword.getText();
         String username=ID.getText();
-        if(pasword.contains("Msa12345")&&username.contains("admin1")&&dep.getSelectedItem()=="CS")
+        if(pasword.contains("1234")&&username.contains("1234")&&dep.getSelectedItem()=="CS")
         {
             IDpassword.setText("");
             ID.setText("");
@@ -180,12 +180,33 @@ public class Main extends javax.swing.JFrame {
             Advisor_CS a = new Advisor_CS();
             a.setVisible(true);
         }
+        
+        
+        else if(pasword.contains("1234")&&username.contains("1234")&&dep.getSelectedItem()=="Pharma")
+        {
+            IDpassword.setText("");
+            ID.setText("");
+            close();
+            Advisor_Pharma a = new Advisor_Pharma();
+            a.setVisible(true);
+        }
+                
+        else if(pasword.contains("1234")&&username.contains("1234")&&dep.getSelectedItem()=="ENG")
+        {
+            IDpassword.setText("");
+            ID.setText("");
+            close();
+            Advisor_CSE a = new Advisor_CSE();
+            a.setVisible(true);
+        }
+        
         else
         {
             JOptionPane.showMessageDialog(null,"wrong pasword or id \n","Wrong pasword",JOptionPane.ERROR_MESSAGE);
             
             
         }
+        
     }//GEN-LAST:event_loginActionPerformed
 
     private void adminloginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adminloginActionPerformed
