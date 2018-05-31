@@ -166,8 +166,8 @@ public class Admin_Login extends javax.swing.JFrame {
         {
             IDpassword.setText("");
             ID.setText("");
-            close();
-            Advisor_CS a = new Advisor_CS();
+            
+            Admin_PanelCS a = new Admin_PanelCS();
             a.setVisible(true);
         }
         
@@ -176,8 +176,8 @@ public class Admin_Login extends javax.swing.JFrame {
         {
             IDpassword.setText("");
             ID.setText("");
-            close();
-            Advisor_Pharma a = new Advisor_Pharma();
+           
+            Admin_PanelPharma a = new Admin_PanelPharma();
             a.setVisible(true);
         }
                 
@@ -185,8 +185,8 @@ public class Admin_Login extends javax.swing.JFrame {
         {
             IDpassword.setText("");
             ID.setText("");
-            close();
-            Advisor_CSE a = new Advisor_CSE();
+            
+            Admin_PanelCSE a = new Admin_PanelCSE();
             a.setVisible(true);
         }
         

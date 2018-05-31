@@ -14,17 +14,18 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 /**
  *
  * @author spide
  */
-public class Admin_Panel extends javax.swing.JFrame {
+public class Admin_PanelCS extends javax.swing.JFrame {
 
     /**
-     * Creates new form Admin_banel
+     * Creates new form Admin_Panel
      */
-    public Admin_Panel() {
+    public Admin_PanelCS() {
         initComponents();
     }
 
@@ -44,6 +45,8 @@ public class Admin_Panel extends javax.swing.JFrame {
         jTextArea1 = new javax.swing.JTextArea();
         jButton3 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTextArea2 = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -91,6 +94,12 @@ public class Admin_Panel extends javax.swing.JFrame {
             }
         });
 
+        jTextArea2.setColumns(20);
+        jTextArea2.setFont(new java.awt.Font("Monospaced", 1, 13)); // NOI18N
+        jTextArea2.setRows(5);
+        jTextArea2.setText("Warning: The Save button will\nrewrite the entire course list \noffered.A backup file is in\nmain folder.");
+        jScrollPane2.setViewportView(jTextArea2);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -109,7 +118,8 @@ public class Admin_Panel extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(18, 18, 18)
                                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 421, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(0, 0, Short.MAX_VALUE)))
@@ -125,7 +135,9 @@ public class Admin_Panel extends javax.swing.JFrame {
                         .addGap(101, 101, 101)
                         .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(29, 29, 29)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(51, 51, 51)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(18, 18, 18)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 502, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -145,21 +157,20 @@ public class Admin_Panel extends javax.swing.JFrame {
         try {
             // TODO add your handling code here:
 
-           file = new File("C:\\Users\\Ziad tarek\\Desktop\\Concepts-Project\\Courses_Available_CS.txt");
+           file = new File("Courses_Available_CS.txt");
            out = new FileWriter(file);
            jTextArea1.write(out);
-           //out.write(jTextArea1.getText());
-           //out.close();
+
         } catch (IOException ex) {
-            Logger.getLogger(Admin_Panel.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Admin_PanelCS.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
+      
         
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         jTextArea1.setText("");
-        File file = new File("C:\\Users\\Ziad tarek\\Desktop\\Concepts-Project\\Courses_Available_CS.txt");
+        File file = new File("Courses_Available_CS.txt");
         BufferedReader br = null;
         try {
             br = new BufferedReader(new FileReader(file));
@@ -179,6 +190,9 @@ public class Admin_Panel extends javax.swing.JFrame {
         } catch (IOException ex) {
             Logger.getLogger(Advisor_CS.class.getName()).log(Level.SEVERE, null, ex);
         }
+        
+        
+        
     
     }//GEN-LAST:event_jButton3ActionPerformed
 
@@ -199,21 +213,23 @@ public class Admin_Panel extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Admin_Panel.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Admin_PanelCS.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Admin_Panel.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Admin_PanelCS.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Admin_Panel.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Admin_PanelCS.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Admin_Panel.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Admin_PanelCS.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Admin_Panel().setVisible(true);
+                new Admin_PanelCS().setVisible(true);
             }
         });
     }
@@ -225,6 +241,8 @@ public class Admin_Panel extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTextArea jTextArea2;
     // End of variables declaration//GEN-END:variables
 }

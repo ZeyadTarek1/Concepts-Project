@@ -177,7 +177,7 @@ public class Advisor_CS extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         jTextArea1.setText("");
-        File file = new File("C:\\Users\\Ziad tarek\\Desktop\\Concepts-Project\\Courses_Available_CS.txt");
+        File file = new File("Courses_Available_CS.txt");
         BufferedReader br = null;
         try {
             br = new BufferedReader(new FileReader(file));
@@ -210,7 +210,7 @@ public class Advisor_CS extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         jTextArea1.setText("");
-        File file = new File("C:\\Users\\Ziad tarek\\Desktop\\Concepts-Project\\CS_Student_Courses_Taken.txt");
+        File file = new File("CS_Student_Courses_Taken.txt");
         BufferedReader br = null;
         try {
             br = new BufferedReader(new FileReader(file));
@@ -238,7 +238,7 @@ public class Advisor_CS extends javax.swing.JFrame {
         
         ArrayList<String> Offered = new ArrayList<String>();
         
-        File file = new File("C:\\Users\\Ziad tarek\\Desktop\\Concepts-Project\\Courses_Available_CS.txt");
+        File file = new File("Courses_Available_CS.txt");
         BufferedReader br = null;
         try {
             br = new BufferedReader(new FileReader(file));
@@ -250,7 +250,7 @@ public class Advisor_CS extends javax.swing.JFrame {
         try 
         {
             while ((st = br.readLine()) != null)
-             Offered.add(st);            
+             Offered.add(st);            //fill arraystring with all courses offered
         } catch (IOException ex) {
             Logger.getLogger(Advisor_CS.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -260,24 +260,19 @@ public class Advisor_CS extends javax.swing.JFrame {
         String usercourse = "";
         String t1,t2;
         jTextArea1.setText("");
-        t1 = "consult('C:\\Users\\Ziad tarek\\Desktop\\Concepts-Project/PrologEngineCS.pl')"; //initialize database
+        t1 = "consult('PrologEngineCS.pl')"; //initialize database
         Query q1 = new Query(t1);
         System.out.println(t1 + " " + (q1.hasSolution() ? "success" : "failed") );
         
         usercourse = jTextField3.getText();
-        t2 = "prereq(" + usercourse + ",Course)";
+        t2 = "prereq(" + usercourse + ",Course)"; //send query given by user
         System.out.println(t2);
         Query q2 = new Query(t2);
-        
-        //System.out.println(t2);
-        //temp2 = q2.getSolution().toString();
-        //jTextField3.setText(temp2);
-        //System.out.println(q2.oneSolution().get("Course"));
-        
-        java.util.Hashtable[] answers = q2.allSolutions();
-        for ( int i = 0; i < answers.length; i++)
+
+        java.util.Hashtable[] answers = q2.allSolutions(); //excecute query
+        for ( int i = 0; i < answers.length; i++) 
         {
-            if(Offered.contains(answers[i]))
+            if(Offered.contains(answers[i])) //if courses currently offered are a prereq, then it should be sent as a "drop" query
             {
             jTextArea1.append(answers[i].toString());
             jTextArea1.append(" \n");
@@ -292,22 +287,15 @@ public class Advisor_CS extends javax.swing.JFrame {
         Variable Course = new Variable();
         String usercourse = "";
         
-        String t1 = "consult('C:\\Users\\Ziad tarek\\Desktop\\Concepts-ProjectPrologEngineCS.pl')"; //initialize database
+        String t1 = "consult('PrologEngineCS.pl')"; //initialize database
         Query q1 = new Query(t1);
         System.out.println(t1 + " " + (q1.hasSolution() ? "success" : "failed") );
-        
-        //String t2 = "prereq(mth100,Course)";
-        
+      
         jTextArea1.setText("");
         usercourse = jTextField3.getText();
         String t2 = "prereq(" + usercourse + ",Course)";
         System.out.println(t2);
         Query q2 = new Query(t2);
-        
-        //System.out.println(t2);
-        //temp2 = q2.getSolution().toString();
-        //jTextField3.setText(temp2);
-        //System.out.println(q2.oneSolution().get("Course"));
         
         java.util.Hashtable[] answers = q2.allSolutions();
         for ( int i = 0; i < answers.length; i++)
@@ -320,31 +308,22 @@ public class Advisor_CS extends javax.swing.JFrame {
 
     private void ReqBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ReqBtnActionPerformed
         // TODO add your handling code here:
-        
-        // TODO add your handling code here:
+
         String temp;
         temp = jTextField3.getText();
         Variable Course = new Variable();
         String usercourse = "";
         
-        String t1 = "consult('C:\\Users\\Ziad tarek\\Desktop\\Concepts-Project\\PrologEngineCS.pl')"; //initialize database
+        String t1 = "consult('PrologEngineCS.pl')"; //initialize database
         Query q1 = new Query(t1);
         System.out.println(t1 + " " + (q1.hasSolution() ? "success" : "failed") );
-        
-        //String t2 = "prereq(mth100,Course)";
-        
-        
+
         jTextArea1.setText("");
         usercourse = jTextField3.getText();
         String t2 = "prereq(Course," + usercourse +")";
         System.out.println(t2);
         Query q2 = new Query(t2);
-        
-        //System.out.println(t2);
-        //temp2 = q2.getSolution().toString();
-        //jTextField3.setText(temp2);
-        //System.out.println(q2.oneSolution().get("Course"));
-        
+
         java.util.Hashtable[] answers = q2.allSolutions();
         for ( int i = 0; i < answers.length; i++)
         {
